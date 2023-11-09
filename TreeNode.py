@@ -21,3 +21,28 @@ class TreeNode:
       current_node = nodes_to_visit.pop()
       print(current_node.value)
       nodes_to_visit += current_node.children
+
+EU = TreeNode("Europe")
+GER = TreeNode("Germany")
+FRA = TreeNode("France")
+ITA = TreeNode("Italy")
+Dor = TreeNode("Dortmund")
+Ber = TreeNode("Berlin")
+Str = TreeNode("Strasburgo")
+Mar = TreeNode("Marseille")
+Mil = TreeNode("Milan")
+Rom = TreeNode("Roma")
+
+EU.add_child(GER)
+EU.add_child(FRA)
+EU.add_child(ITA)
+
+GER.add_child(Dor)
+GER.add_child(Ber)
+FRA.add_child(Str)
+FRA.add_child(Mar)
+ITA.add_child(Mil)
+ITA.add_child(Rom)
+
+print("-------------------")
+EU.traverse()
